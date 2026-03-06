@@ -1,0 +1,10 @@
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/DownloadServiceApplication.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/config/SecurityConfig.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/controller/CustomerDownloadController.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/domain/CustomerDownload.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/dto/CustomerDownloadRequest.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/dto/CustomerDownloadResponse.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/events/DomainEvent.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/events/EventPublisher.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/repository/CustomerDownloadRepository.java
+/Users/andreaterrasi/Documents/New_project/download-service/src/main/java/com/newproject/download/service/CustomerDownloadService.java
