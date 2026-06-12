@@ -1,0 +1,13 @@
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/DownloadServiceApplication.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/config/SecurityConfig.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/controller/CustomerDownloadController.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/domain/CustomerDownload.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/dto/CustomerDownloadRequest.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/dto/CustomerDownloadResponse.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/error/ApiErrorResponse.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/error/GlobalApiExceptionHandler.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/events/DomainEvent.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/events/EventPublisher.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/repository/CustomerDownloadRepository.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/security/RequestActor.java
+/Users/andreaterrasi/Desktop/sviluppo/workspace_claudecode/kerosstudio/ecommerce/download-service/src/main/java/com/newproject/download/service/CustomerDownloadService.java

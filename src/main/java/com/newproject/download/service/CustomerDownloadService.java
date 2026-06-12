@@ -5,6 +5,7 @@ import com.newproject.download.dto.CustomerDownloadRequest;
 import com.newproject.download.dto.CustomerDownloadResponse;
 import com.newproject.download.events.EventPublisher;
 import com.newproject.download.repository.CustomerDownloadRepository;
+import com.newproject.download.security.RequestActor;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,14 +16,18 @@ import org.springframework.transaction.annotation.Transactional;
 public class CustomerDownloadService {
     private final CustomerDownloadRepository repository;
     private final EventPublisher eventPublisher;
+    private final RequestActor requestActor;
 
-    public CustomerDownloadService(CustomerDownloadRepository repository, EventPublisher eventPublisher) {
+    public CustomerDownloadService(CustomerDownloadRepository repository, EventPublisher eventPublisher, RequestActor requestActor) {
         this.repository = repository;
         this.eventPublisher = eventPublisher;
+        this.requestActor = requestActor;
     }
 
     @Transactional(readOnly = true)
     public List<CustomerDownloadResponse> list(Long customerId) {
+        // SECURITY (H3): un utente autenticato puo' leggere solo i propri download (IDOR fix).
+        requestActor.assertCustomerAccessIfAuthenticated(customerId);
         return repository.findByCustomerIdOrderByCreatedAtDesc(customerId)
             .stream()
             .map(this::toResponse)
@@ -31,6 +36,10 @@ public class CustomerDownloadService {
 
     @Transactional
     public CustomerDownloadResponse create(Long customerId, CustomerDownloadRequest request) {
+        // SECURITY (H3): emettere un entitlement di download e' un'operazione amministrativa /
+        // di fulfillment, mai self-service del cliente. Senza questo controllo chiunque poteva
+        // forgiare download digitali per qualsiasi customerId.
+        requestActor.assertAdmin();
         CustomerDownload download = new CustomerDownload();
         download.setCustomerId(customerId);
         download.setOrderId(request.getOrderId());
